@@ -1,0 +1,58 @@
+/*	**************************
+	Site colors
+	#ffb0a5 - 
+	#e48482 - 
+	#333333 - 
+	color:#ffb0a5
+	************************** */
+
+body {
+  color: #333333;
+  font-family: 'Merriweather', serif;
+}
+
+a {
+	font-weight:bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:#e48482;
+	font-weight:bold;
+	font-family: 'Lato', sans-serif;
+}
+
+/*	**************************
+	Footer styles
+	************************** */
+.li-footer-inline-block {display:inline-block; text-align:center;}
+.li-footer-inline-block a {font-weight:normal !important;}
+
+
+/*	**************************
+	568px
+	************************** */
+@media (max-width: 568px) {
+	
+.hide {display:none;}
+.max-width {width:100%;}
+
+}
+
+/*	**************************
+	768px
+	************************** */
+@media (min-width: 768px) {
+
+
+}
+
+/*	**************************
+	992px
+	************************** */
+@media (min-width: 992px) {
+
+
+}
+
+
+
