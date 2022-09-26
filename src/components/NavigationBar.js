@@ -61,7 +61,7 @@ const NavigationBar = () => {
           height="25"
           alt="brand"
         />{" "}
-        Book Store
+        Projeto Guardião
       </Link>
       {auth.isLoggedIn ? userLinks : guestLinks}
     </Navbar>
