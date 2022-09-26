@@ -1,39 +1,24 @@
-import React from 'react';
-import { Table } from 'reactstrap';
+import React, { useState, useEffect } from "react";
+import { Navbar, Container, Col } from "react-bootstrap";
 
-const Footer = (props) => {
+const Footer = () => {
+  const [fullYear, setFullYear] = useState();
+
+  useEffect(() => {
+    setFullYear(new Date().getFullYear());
+  }, [fullYear]);
+
   return (
-    <Table borderless>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </Table>
+    <Navbar fixed="bottom" bg="dark" variant="dark">
+      <Container>
+        <Col lg={12} className="text-center text-muted">
+          <div>
+            {fullYear}-{fullYear + 1}. Todos os direitos reservados por thiagoddcqg
+          </div>
+        </Col>
+      </Container>
+    </Navbar>
   );
-}
+};
 
 export default Footer;
