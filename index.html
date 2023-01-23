@@ -1,161 +1,215 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.108.0">
-    <title>Navbar Template · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars-offcanvas/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.108.0">
+  <title>Navbar Template · Bootstrap v5.3</title>
 
-    
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars-offcanvas/">
 
-    
 
-<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+
+
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
 
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="navbars-offcanvas.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<main>
+  <!-- Custom styles for this template -->
+  <link href="navbars-offcanvas.css" rel="stylesheet">
+</head>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Responsive offcanvas navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<body>
+
+  <main>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Responsive offcanvas navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3 mt-lg-0" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <div class="bg-light p-5 rounded">
+        <div class="col-sm-8 py-5 mx-auto">
+          <h1 class="display-5 fw-normal">Navbar with offcanvas examples</h1>
+          <p class="fs-5">This example shows how responsive offcanvas menus work within the navbar. For positioning of
+            navbars, checkout the <a href="../examples/navbar-static/">top</a> and <a
+              href="../examples/navbar-fixed/">fixed top</a> examples.</p>
+          <ol>
+            <li>
+              <p>ÁLVAREZ-GARCÍA, José et al. Active ageing: Mapping of scientific coverage. International journal of
+                environmental research and public health, v. 15, n. 12, p. 2727, 2018.</p>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li>
+              <p>BANGOR, Aaron; KORTUM, Philip T.; MILLER, James T. An empirical evaluation of the system usability
+                scale. Intl. Journal of Human–Computer Interaction, v. 24, n. 6, p. 574-594, 2008.</p>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+            <li>
+              <p>BRASIL. Estatuto do idoso. Brasília (DF): Senado Federal, 2003.</p>
             </li>
-          </ul>
-          <form class="d-flex mt-3 mt-lg-0" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+            <li>
+              <p>CLARK, Herbert H.; BRENNAN, Susan E. Grounding in communication. 1991.</p>
+            </li>
+            <li>
+              <p>CLARK, Herbert H. Arenas of language use. University of Chicago Press, 1992.</p>
+            </li>
+            <li>
+              <p>GAMA, Thiago; OLIVEIRA, Francisco. Diretrizes para o Desenvolvimento de Agentes Relacionais Baseados em
+                Common Ground para Pessoas Idosas. Anais do Computer on the Beach, v. 13, p. 327-328, 2022.</p>
+            </li>
+            <li>
+              <p>KHOSRAVI, Pouria; GHAPANCHI, Amir Hossein. Investigating the effectiveness of technologies applied to
+                assist seniors: A systematic literature review. International journal of medical informatics, v. 85, n.
+                1, p. 17-26, 2016.</p>
+            </li>
+            <li>
+              <p>LANCET, The. Patient empowerment—who empowers whom?. The Lancet, v. 379, n. 9827, p. 1677, 2012.</p>
+            </li>
+            <li>
+              <p>GAMA, Thiago; OLIVEIRA, Francisco. Diretrizes para o Desenvolvimento de Agentes Relacionais Baseados em
+                Common Ground para Pessoas Idosas. Anais do Computer on the Beach, v. 13, p. 327-328, 2022.</p>
+            </li>
+            <li>
+              <p>KHOSRAVI, Pouria; GHAPANCHI, Amir Hossein. Investigating the effectiveness of technologies applied to
+                assist seniors: A systematic literature review. International journal of medical informatics, v. 85, n.
+                1, p. 17-26, 2016.</p>
+            </li>
+            <li>
+              <p>LANCET, The. Patient empowerment—who empowers whom?. The Lancet, v. 379, n. 9827, p. 1677, 2012.</p>
+            </li>
+            <li>
+              <p>LOH, Frank et al. Talk to Me: Investigating the Traffic Characteristics of Amazon Echo Dot and Google
+                Home. In: 2020 IEEE Eighth International Conference on Communications and Electronics (ICCE). IEEE,
+                2021. p. 521-526.</p>
+            </li>
+            <li>
+              <p>NATIONAL INSTITUTE ON AGING. Social isolation, loneliness in older people pose health risks. Natl Inst
+                Aging, 2019.</p>
+            </li>
+            <li>
+              <p>NEGRINI, Etienne Larissa Duim et al. Quem são e como vivem os idosos que moram sozinhos no Brasil.
+                Revista Brasileira de Geriatria e Gerontologia, v. 21, p. 523-531, 2018.</p>
+            </li>
+            <li>
+              <p>NETO, Félix. Psicologia social. Universidade Aberta, 2001.</p>
+            </li>
+            <li>
+              <p>TERZOPOULOS, George; SATRATZEMI, Maya. Voice assistants and smart speakers in everyday life and in
+                education. Informatics in Education, v. 19, n. 3, p. 473-490, 2020.</p>
+            </li>
+            <li>
+              <p>VARRELLA, S. Feeling of Loneliness Among Adults 2021, by Country. Hamburg: Statista, 2021.</p>
+            </li>
+            <li>
+              <p id="weis1973">WEIS, R. S. The experience of emotional and social isolation. 1973.</p>
+            </li>
+          </ol>
+          <p>
+            <a class="btn btn-primary" href="../components/navbar/#offcanvas" role="button">Learn more about offcanvas
+              navbars &raquo;</a>
+          </p>
         </div>
       </div>
     </div>
-  </nav>
+  </main>
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-  <div class="container my-5">
-    <div class="bg-light p-5 rounded">
-      <div class="col-sm-8 py-5 mx-auto">
-        <h1 class="display-5 fw-normal">Navbar with offcanvas examples</h1>
-        <p class="fs-5">This example shows how responsive offcanvas menus work within the navbar. For positioning of navbars, checkout the <a href="../examples/navbar-static/">top</a> and <a href="../examples/navbar-fixed/">fixed top</a> examples.</p>
-        <p>ÁLVAREZ-GARCÍA, José et al. Active ageing: Mapping of scientific coverage. International journal of environmental research and public health, v. 15, n. 12, p. 2727, 2018.</p>
-        <p>BANGOR, Aaron; KORTUM, Philip T.; MILLER, James T. An empirical evaluation of the system usability scale. Intl. Journal of Human–Computer Interaction, v. 24, n. 6, p. 574-594, 2008.</p>
-        <p>BRASIL. Estatuto do idoso. Brasília (DF): Senado Federal, 2003.</p>
-        <p>CLARK, Herbert H.; BRENNAN, Susan E. Grounding in communication. 1991.</p>
-        <p>CLARK, Herbert H. Arenas of language use. University of Chicago Press, 1992.</p>
-        <p>GAMA, Thiago; OLIVEIRA, Francisco. Diretrizes para o Desenvolvimento de Agentes Relacionais Baseados em Common Ground para Pessoas Idosas. Anais do Computer on the Beach, v. 13, p. 327-328, 2022.</p>
-        <p>KHOSRAVI, Pouria; GHAPANCHI, Amir Hossein. Investigating the effectiveness of technologies applied to assist seniors: A systematic literature review. International journal of medical informatics, v. 85, n. 1, p. 17-26, 2016.</p>
-        <p>LANCET, The. Patient empowerment—who empowers whom?. The Lancet, v. 379, n. 9827, p. 1677, 2012.</p>
-        <p>GAMA, Thiago; OLIVEIRA, Francisco. Diretrizes para o Desenvolvimento de Agentes Relacionais Baseados em Common Ground para Pessoas Idosas. Anais do Computer on the Beach, v. 13, p. 327-328, 2022.</p>
-        <p>KHOSRAVI, Pouria; GHAPANCHI, Amir Hossein. Investigating the effectiveness of technologies applied to assist seniors: A systematic literature review. International journal of medical informatics, v. 85, n. 1, p. 17-26, 2016.</p>
-        <p>LANCET, The. Patient empowerment—who empowers whom?. The Lancet, v. 379, n. 9827, p. 1677, 2012.</p>
-        <p>LOH, Frank et al. Talk to Me: Investigating the Traffic Characteristics of Amazon Echo Dot and Google Home. In: 2020 IEEE Eighth International Conference on Communications and Electronics (ICCE). IEEE, 2021. p. 521-526.</p>
-        <p>NATIONAL INSTITUTE ON AGING. Social isolation, loneliness in older people pose health risks. Natl Inst Aging, 2019.</p>
-        <p>NEGRINI, Etienne Larissa Duim et al. Quem são e como vivem os idosos que moram sozinhos no Brasil. Revista Brasileira de Geriatria e Gerontologia, v. 21, p. 523-531, 2018.</p>
-        <p>NETO, Félix. Psicologia social. Universidade Aberta, 2001.</p>
-        <p>TERZOPOULOS, George; SATRATZEMI, Maya. Voice assistants and smart speakers in everyday life and in education. Informatics in Education, v. 19, n. 3, p. 473-490, 2020.</p>
-        <p>VARRELLA, S. Feeling of Loneliness Among Adults 2021, by Country. Hamburg: Statista, 2021.</p>
-        <p>WEIS, R. S. The experience of emotional and social isolation. 1973.</p>
-        <p>
-          <a class="btn btn-primary" href="../components/navbar/#offcanvas" role="button">Learn more about offcanvas navbars &raquo;</a>
-        </p>
-    </div>
-    </div>
-  </div>
-</main>
-
-
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <li><a href="#habilite-gzip">#1 - Habilite GZIP</a></li>
-
-      <h3 id="habilite-gzip">#1 - Habilite GZIP</h3>
-  </body>
 </html>
